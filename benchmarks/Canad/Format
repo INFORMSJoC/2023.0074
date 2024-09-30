@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------------------*/
+/*----------------------------- File Format --------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--                							  --*/
+/*--  Description of the "Canad" file format for Fixed Charge 		  --*/
+/*--  Multicommodity Min Cost Flow Problems	                          --*/
+/*--                     			                          --*/
+/*--                	        08 - 04 - 1997			       	  --*/
+/*--                     			                          --*/
+/*--			       Antonio Frangioni       			  --*/
+/*--                							  --*/
+/*--   			   Operations Research Group			  --*/
+/*--			  Dipartimento di Informatica			  --*/
+/*--   			     Universita' di Pisa			  --*/
+/*--                							  --*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+In the following, n, m, b and k will be the number of nodes, arcs, arcs with
+mutual capacity constraints and commodities of the problems respectively;
+X[ h ][ i ] will denote an element indiced over the commodities (h = 1 .. k)
+and the arcs (i = 1 .. m) or the nodes (i = 1.. n), while X[ i ] an element
+indiced only over the arcs. The names of the elements ( X ) are
+self-explicative.
+
+A negative capacity is considered an infinite capacity: this is true for both
+individual and mutual capacities. However, the current generators do not
+produce such un-capacitated arcs.
+
+The underlying graph can in principle be understood either as directed or as
+undirected: however, the current generators produce directed problems.
+
+The Fixed Charge cost may in princple be omitted (i.e. taken as 0), hence the
+place in which it is put on the file format is signalled by angled brackets:
+however, the current generators always produce the FC-costs.
+
+THE FORMAT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n
+m
+k
+
+for( i = 1 .. m ) {
+ End_Node[ i ]
+ Start_Node[ i ]
+ < Fixed_Charge_Cost[ i ] >
+ Mutual_Capacity[ i ]
+ pk
+
+ for( j = 1 .. pk ) {
+  h
+  Arc_Cost[ h ][ i ]
+  Single_Commodity_Capacity[ h ][ i ]
+  }
+ }
+
+until( End_Of_File ) {
+ h
+ i
+ Supply[ h ][ i ]
+ }
+
+END OF FORMAT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+A note on node naming conventions:  node "names" can be either the integers
+from 0 to n - 1 or the integers from 1 to n. Altough the current generators
+use the second form, the choice is usually "almost" immaterial for the codes.
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------- End File Format -------------------------------*/
+/*--------------------------------------------------------------------------*/

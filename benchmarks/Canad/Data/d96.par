@@ -1,0 +1,22 @@
+nocca
+ctight 200.0
+fixvar 0.5
+noprll 10
+scalex 5
+scaley 6
+commod 400
+addarc 700
+minsrc 15
+maxsrc 15
+minsnk 15
+maxsnk 15
+minfct 10
+maxfct 100
+mincst 1
+maxcst 10
+minsup 150
+maxsup 750
+mincap 100
+maxcap 500
+outfil out 
+end

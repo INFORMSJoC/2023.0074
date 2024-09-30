@@ -1,0 +1,28 @@
+# Batch file for generating problems p1.dat ... p32.dat with the
+# "bipart" random generator.
+#
+# Uses as input the parameters found in ../Data/d1.par - d32.par.
+#
+# In a Unix environment, simply type "source batch" or "csh < batch"
+
+foreach i ( 1 2 3 4 5 6 7 8 9 )
+ bipart ../Data/d$i.par
+ mv out ../p$i.dat
+ gzip ../p$i.dat
+end
+
+foreach j ( 1 2 )
+foreach i ( 0 1 2 3 4 5 6 7 8 9 )
+ bipart ../Data/d$j$i.par
+ mv out ../p$j$i.dat
+ gzip ../p$j$i.dat
+end
+end
+
+foreach i ( 0 1 2 )
+ bipart ../Data/d3$i.par
+ mv out ../p3$i.dat
+ gzip ../p3$i.dat
+end
+
+# end of batch

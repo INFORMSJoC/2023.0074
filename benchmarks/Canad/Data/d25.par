@@ -1,0 +1,15 @@
+datafn out
+origin 50
+destin 50
+odarcs 50
+commod 10
+minsup 500
+maxsup 1000
+mincap 100
+maxcap 500
+minfct 10
+maxfct 100
+mintct 10
+maxtct 100
+ctight 4.0
+fixvar 0.1

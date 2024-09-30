@@ -1,0 +1,1 @@
+      parameter(maxnod=100,maxarc=2500,maxcom=100)

@@ -1,0 +1,89 @@
+!data/
+data/*
+!data/keep/*.csv
+!*.R
+!*.ipynb
+!data/**/*.R
+!data/**/*.ipynb
+# application/language/*
+# !application/language/gr/
+MCND_sensitivity_analysis_output.csv
+*.txt
+*.svg
+*.gz
+*.vscode
+*.csv
+*.RData
+*.RHistory
+
+*.jld2
+
+*core.*
+
+figures/*
+!figures/final/
+*.png
+*.pdf
+*tests_temp.jl
+*/cmp/*
+*.tar
+*.tgz
+
+.idea/*
+
+
+
+benchmarks/R-Instances-master/README.md
+benchmarks/R-Instances-master.zip
+doc/VI_Feasibility_Magnanti.html
+
+
+src/old code/*
+DataNetworkDesignExperimentsDeterministic.jl
+DataNetworkDesignExperimentsStochasticBenchmarksR_feasible.jl
+DataNetworkDesignExperimentsStochasticBenchmarksR.jl
+DataNetworkDesignExperimentsStochastic.jl
+NetworkDesign_Notebook EXPLOR.ipynb
+NetworkDesign_Notebook copy.ipynb
+cmcmd_aggregation.jl
+benchmark_analysis_separate.R
+src/cmc_library.jl
+src/mc_library.jl
+src/mcmd_library.jl
+
+src/data/data analysis/*
+doc/*
+!doc/frequent_commands.sh
+!doc/*.sh
+doc/*.md
+
+tmp/*
+
+scripts/deprecated/*
+scripts/data analysis/*
+
+.deepsource.toml
+
+*.zip
+
+*__pycache__*
+sss
+cmcmd_prob.jld
+src/scp_library_og_main.jl
+src/general_library_main.jl
+src/nd_core_main.jl
+tests/TestDataNetworkDesign2.jl
+tmp/
+tests/DataNetworkDesign_DEBUG.jl
+tests/NetworkDesign_Notebook_cert.ipynb
+tests/README.md
+tests/tests_local.jl
+tests/tests_local_funcs.jl
+scripts/
+src/mkMyDir.jl
+data/previous/
+NetworkDesign_Notebook - local tests.ipynb
+NetworkDesign_Notebook.ipynb
+NetworkDesign_Notebook_cert.ipynb
+doc/
+TODO.md
