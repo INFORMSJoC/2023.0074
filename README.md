@@ -11,7 +11,30 @@ that were used in the research reported on in the paper
 Large-Scale Stochastic Network Design](https://doi.org/10.1287/ijoc.2023.0074) by Dimitris Bertsimas, Ryan Cory-Wright, Jean Pauphilet, and Periklis Petridis.
 
 
-# Quick Start
+ 
+## Cite
+To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
+
+https://doi.org/10.1287/ijoc.2023.0074
+
+https://doi.org/10.1287/ijoc.2023.0074.cd
+
+Below is the BibTex for citing this snapshot of the repository.
+
+```
+@misc{scp-network-design,
+  author =        {Dimitris Bertsimas, Ryan Cory-Wright, Jean Pauphilet, Periklis Petridis},
+  publisher =     {INFORMS Journal on Computing},
+  title =         {{A Stochastic Benders Decomposition Scheme for
+Large-Scale Stochastic Network Design}},
+  year =          {2024},
+  doi =           {10.1287/ijoc.2023.0074.cd},
+  url =           {https://github.com/INFORMSJoC/2023.0074},
+  note =          {Available for download at https://github.com/INFORMSJoC/2023.0074},
+}  
+```
+
+## Quick Start
 
 ### DataNetworkDesign.jl 
 The main julia file for running everything. You can set all arguments from the command line. 
@@ -56,7 +79,7 @@ end
 ```
 
 
-# Test Run
+## Test Run
 You can also run the test file to check if everything is working properly. This runs a few different configurations of the algorithm and checks if the results are as expected.
 
 ```bash
@@ -75,14 +98,14 @@ scp_fat_kelley-scp_fat_cuts-20_det            |    74443.597 |    74443.535 |   
 scp_fat_kelley-scp_fat_cuts-20_stoch          |    74443.542 |    74443.535 |    74443.542 |     0.0 |      0.0 |  9.387 |   88.0 |      -0.034 |         5.0
 ```
 
-# Code Structure
+## Code Structure
 Main code separated in the following files:
 - `DataNetworkDesign.jl`: Main file to run the algorithm.
 - `src/general_library.jl`: General functions used in the algorithm.
 - `src/scp_library.jl`: Functions related to the stochastic cutting planes.
 
 
-# Quick start for SLURM Environments
+## Quick start for SLURM Environments
 Use commands analogous to the following to run the code in HPC cluster environment with SLURM (interactively).
 Below are the commands for MIT Engaging.
 
@@ -99,26 +122,3 @@ srun --pty --partition=sched_mit_sloan_interactive --cpus-per-task=1 --mem=4G ba
 julia DataNetworkDesign.jl --rootCuts 20 --sample_kelley 4 --days 10 --nodes 1 --sample 4
 ```
 
-
- 
-# Citing
-To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
-
-https://doi.org/10.1287/ijoc.2023.0074
-
-https://doi.org/10.1287/ijoc.2023.0074.cd
-
-Below is the BibTex for citing this snapshot of the repository.
-
-```
-@misc{scp-network-design,
-  author =        {Dimitris Bertsimas, Ryan Cory-Wright, Jean Pauphilet, Periklis Petridis},
-  publisher =     {INFORMS Journal on Computing},
-  title =         {{A Stochastic Benders Decomposition Scheme for
-Large-Scale Stochastic Network Design}},
-  year =          {2024},
-  doi =           {10.1287/ijoc.2023.0074.cd},
-  url =           {https://github.com/INFORMSJoC/2023.0074},
-  note =          {Available for download at https://github.com/INFORMSJoC/2023.0074},
-}  
-```
