@@ -1,0 +1,26 @@
+# Batch file for generating problems p33.dat ... p96.dat with the
+# "bipart" random generator.
+#
+# Uses as input the parameters found in ../Data/d33.par - d96.par.
+#
+# In a Unix environment, simply type "source batch" or "csh < batch"
+
+foreach i ( 3 4 5 6 7 8 9 )
+ mulgen ../Data/d3$i.par
+ mv out ../p3$i.dat
+end
+
+foreach j ( 4 5 6 7 8 )
+foreach i ( 0 1 2 3 4 5 6 7 8 9 )
+ mulgen ../Data/d$j$i.par
+ mv out ../p$j$i.dat
+end
+end
+
+foreach i ( 0 1 2 3 4 5 6 )
+ mulgen ../Data/d9$i.par
+ mv out ../p9$i.dat
+end
+
+# end of batch
+

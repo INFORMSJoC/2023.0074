@@ -1,0 +1,16 @@
+!data/
+data/*
+*.txt
+*.svg
+*.gz
+*.vscode
+*.csv
+*.RData
+*.RHistory
+*.jld2
+*.png
+*.pdf
+*.tar
+*.tgz
+.idea/*
+

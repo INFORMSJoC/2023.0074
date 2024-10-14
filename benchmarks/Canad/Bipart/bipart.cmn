@@ -1,0 +1,16 @@
+      integer   uparam,udataf
+      logical ldataf
+      common /units/ uparam,udataf,ldataf
+
+      integer   origin,destin,commod,odarcs,minsup,maxsup,
+     +          mincap,maxcap, minfct,maxfct,mintct,maxtct,
+     +          iseed
+      real   xtight,xfixvar
+      logical caploc,ctight,fixvar
+      common /param/ xtight, xfixvar, origin,destin,commod,odarcs,
+     +               minsup, maxsup,mincap, maxcap,minfct,maxfct,
+     +               mintct,maxtct,iseed, ctight,fixvar,caploc
+
+      integer   from(maxarc),to(maxarc),fc(maxarc),tcap(maxarc),
+     +        tc(maxarc,maxcom),pcap(maxarc,maxcom),sup(maxnod,maxcom)
+      common /data/ from,to,fc,tcap,tc,pcap,sup

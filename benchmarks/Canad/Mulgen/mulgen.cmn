@@ -1,0 +1,52 @@
+       integer startn(MAXARCS), endn(MAXARCS)
+       integer c(MAXARCS), u(MAXARCS)
+       integer b(MAXCOMM, MAXNODES)
+       integer cost(MAXCOMM, MAXARCS)
+       integer cap(MAXCOMM, MAXARCS)
+       integer totsup(MAXCOMM)
+       integer sinks(MAXCOMM), sources(MAXCOMM)
+
+       integer uparam,udataf
+
+       character outfile*40
+       character mpsfile*40,rnetfile*40,dowfile*40,lpfile*40
+       integer dim1,dim2,n,na,comm,addarcs,totsupply
+       integer minsources,maxsources,minsinks,maxsinks
+       integer mincca,maxcca,mincost,maxcost,mincap
+       integer maxcap,minfcost,maxfcost,maxsup,minsup
+       integer iter,inseed
+       real xtight,xfixvar
+
+       character var*6
+       integer fcstprop, capprop, nulcomprop, topcomprop
+       logical nulfcst, topcap, nulcom, noparallel, topcom, mpsflg,
+     +         dow, ccabin, capbin, rnet, single, cplex, nocca,
+     +         fich4,mrnet, nosfil, grid, cgrid, LP1,ctight,fixvar
+
+c   ******************* COMMON VARIABLES ************************
+
+        common /units/ uparam,udataf
+
+        common /specs/ dim1,dim2,addarcs,
+     +  minsources,maxsources,minsinks,maxsinks,mincost,
+     +  maxcost, mincap, maxcap,minfcost,maxfcost,
+     +  dow, maxsup, minsup, mincca, maxcca
+
+        common /tables/ totsup, totsupply, sinks, sources
+	
+	common /char1/ var
+
+c       common /char2/ infile
+
+	common /param/ outfile,n,na,comm
+
+	common /network/ u,c,b,cap,cost,startn,endn
+
+        common /files/ rnetfile,dowfile,mpsfile, lpfile
+
+	common /options/ nulfcst, fcstprop, topcap, capprop,
+     +  nulcom, nulcomprop, noparallel, iter, topcom, topcomprop,
+     +  mpsflg, ccabin, capbin, rnet, single, cplex, nocca,
+     +  fich4,mrnet, nosfil, grid, cgrid, LP1,ctight,xtight,fixvar,
+     +  xfixvar,inseed
+
